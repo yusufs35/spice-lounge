@@ -80,6 +80,40 @@ header .contact .phone {
 }
 /*  HEADER */
 
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 7rem;
+  z-index: 1;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+}
+
+footer a {
+  background-color: #f32c2c;
+  padding: 0.2rem 1rem;
+  border-radius: 0.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  text-align: right;
+  box-shadow: 2px 2px 3px #03030357;
+}
+
+footer i {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.212);
+}
+/* FOOTER */
+
 /* SOCIAL MEDIA */
 
 .social-media {
