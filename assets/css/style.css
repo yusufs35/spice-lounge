@@ -58,10 +58,25 @@ body {
 header {
   position: absolute;
   top: 1rem;
-  left: 0rem;
+  left: 0;
+  right: 0;
   padding-left: 7rem;
   padding-right: 7rem;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .contact {
+  color: white;
+  font-size: 1.3rem;
+  text-align: right;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.514);
+}
+
+header .contact .phone {
+  font-size: 2.2rem;
+  font-weight: 600;
 }
 /*  HEADER */
 
@@ -79,7 +94,6 @@ header {
   width: 3rem;
   height: 3rem;
   padding: 0.3rem;
-  display: inline-block;
   font-size: 1.2rem;
   color: #ffffff;
   display: flex;
