@@ -13,6 +13,16 @@ body {
   background-size: cover;
   background-position: center center;
 }
+.carousel .arrow {
+  font-size: 4rem;
+}
+
+@media (max-width: 992px) {
+  .carousel button {
+    display: none;
+  }
+}
+
 /* CAROUSEL */
 
 /* NAVBAR */
@@ -22,7 +32,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 7;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -52,6 +62,13 @@ body {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
+
+@media (max-width: 992px) {
+  .navbar-main {
+    top: 0;
+  }
+}
+
 /* NAVBAR */
 
 /*  HEADER */
@@ -67,30 +84,83 @@ header {
   justify-content: space-between;
 }
 
+@media (max-width: 992px) {
+  header {
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
 header .contact {
   color: white;
   font-size: 1.3rem;
   text-align: right;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.514);
+  width: 100vw;
+}
+
+@media (max-width: 992px) {
+  header .contact {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.541);
+  }
 }
 
 header .contact .phone {
   font-size: 2.2rem;
   font-weight: 600;
 }
+
+.social-media {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.social-media a {
+  background-color: rgba(22, 9, 9, 0.842);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-media li {
+  margin-right: 0.7rem;
+}
+
 /*  HEADER */
 
 /* FOOTER */
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 0rem;
   right: 7rem;
   z-index: 5;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  footer {
+    right: 50%;
+    transform: translateX(50%) scale(0.7);
+  }
 }
 
 footer ul {
   display: flex;
   list-style-type: none;
+  padding-left: 4rem;
 }
 
 footer li {
@@ -179,30 +249,18 @@ footer i {
 }
 /* FOOTER */
 
-/* SOCIAL MEDIA */
-
-.social-media {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
+/* PAGE COMMON */
+.page-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.social-media a {
-  background-color: rgba(22, 9, 9, 0.842);
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.3rem;
-  font-size: 1.2rem;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+.page-bg .row {
+  margin-top: 6rem;
 }
-
-.social-media li {
-  margin-right: 0.7rem;
-}
-
-/* SOCIAL MEDIA */
