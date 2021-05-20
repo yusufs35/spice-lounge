@@ -22,7 +22,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 5;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -62,7 +62,7 @@ header {
   right: 0;
   padding-left: 7rem;
   padding-right: 7rem;
-  z-index: 1;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
 }
@@ -85,7 +85,7 @@ footer {
   position: absolute;
   bottom: 0;
   right: 7rem;
-  z-index: 1;
+  z-index: 5;
 }
 
 footer ul {
@@ -93,10 +93,71 @@ footer ul {
   list-style-type: none;
 }
 
-footer a {
+footer li {
   background-color: #f32c2c;
-  padding: 0.2rem 1rem;
   border-radius: 0.2rem;
+  transition: all 0.5s;
+}
+
+footer li:hover {
+  background-color: #f11717;
+}
+
+footer li:hover::after {
+  border-top: 13px solid #f11717;
+}
+
+footer li:hover i {
+  color: rgba(0, 0, 0, 0.349);
+}
+
+/* Kutuların altındaki üçgeni oluşturur */
+footer li::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 13px solid #f32c2c;
+  border-right: 15px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 0 solid transparent;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Elemanları içi içe geçirmek ve kendi etrafında 5 derece döndürmek için */
+footer li:nth-child(1) {
+  z-index: 12;
+  transform: rotate(-5deg);
+}
+
+footer li:nth-child(1):hover {
+  z-index: 30;
+  transform: rotate(0deg) scale(1.1);
+}
+
+footer li:nth-child(2) {
+  z-index: 11;
+  transform: translateX(-30%) rotate(5deg);
+}
+
+footer li:nth-child(2):hover {
+  z-index: 30;
+  transform: translateX(-30%) rotate(0deg) scale(1.1);
+}
+
+footer li:nth-child(3) {
+  z-index: 10;
+  transform: translateX(-60%) rotate(-5deg);
+}
+
+footer li:nth-child(3):hover {
+  z-index: 30;
+  transform: translateX(-60%) rotate(0deg) scale(1.1);
+}
+/* Elemanları içi içe geçirmek ve kendi etrafında 5 derece döndürmek için */
+
+footer a {
+  padding: 0.2rem 1.3rem;
   color: #ffffff;
   text-decoration: none;
   display: flex;
@@ -105,7 +166,11 @@ footer a {
   gap: 8px;
   height: 100%;
   text-align: right;
-  box-shadow: 2px 2px 3px #03030357;
+  box-shadow: 2px 0px 8px #03030357;
+}
+
+footer a:hover {
+  color: white;
 }
 
 footer i {
