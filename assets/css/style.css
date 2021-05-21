@@ -7,6 +7,7 @@
 body {
   font-family: Oswald;
   font-size: 1rem;
+  overflow: hidden;
 }
 /* COMMON */
 
@@ -378,3 +379,20 @@ footer i {
   filter: invert(1);
 }
 /* PAGE RESERVATION */
+
+/* PAGE CONTACT */
+.page-contact table th {
+  font-size: 1.5rem;
+  color: var(--color1);
+  padding: 0.5rem;
+}
+
+.page-contact table td {
+  padding: 0.5rem;
+}
+
+.page-contact .social-media {
+  margin-top: 3rem;
+}
+
+/* PAGE CONTACT */
