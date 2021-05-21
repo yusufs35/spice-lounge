@@ -290,7 +290,7 @@ footer i {
   font-weight: 200;
 }
 
-.page-bg button {
+.page-bg .btn {
   background-color: var(--color1);
   color: rgb(224, 224, 224);
 }
@@ -327,3 +327,54 @@ footer i {
   color: var(--color1);
 }
 /* PAGE ABOUT */
+
+/* PAGE MENU */
+.page-menu .accordion-item {
+  margin-bottom: 0.4rem;
+  border: none;
+  background-color: rgba(173, 173, 173, 0.664);
+}
+
+.page-menu .accordion-button {
+  background-color: rgba(5, 5, 5, 0.664);
+  border: none;
+  color: rgb(160, 160, 160);
+  outline: 0;
+}
+
+.page-menu .accordion-button::after {
+  background: none;
+  content: "\f067";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.page-menu .accordion-button:not(.collapsed)::after {
+  background: none;
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.page-menu .accordion-button:focus {
+  box-shadow: none;
+}
+/* PAGE MENU */
+
+/* PAGE RESERVATION */
+.page-reservation .input-group button,
+.page-reservation textarea,
+.page-reservation input {
+  background-color: rgba(48, 48, 48, 0.74);
+  border: 0;
+  padding: 0.8rem;
+}
+
+.page-reservation .input-group {
+  width: 70%;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+/* PAGE RESERVATION */
